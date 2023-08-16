@@ -12,4 +12,4 @@ COPY . .
 
 # Exposing port 3000 and starting app
 EXPOSE 3000
-CMD ["node" , "index.js"]
+CMD ["npm" , "run", "dev"]
