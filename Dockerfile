@@ -10,6 +10,9 @@ RUN npm install
 # Copying source code files
 COPY . .
 
-# Exposing port 3000 and starting app
-EXPOSE 3000
+# Setting port enviroment Variable
+ENV PORT 3000
+
+# Exposing port and starting app
+EXPOSE $PORT
 CMD ["npm" , "run", "dev"]
