@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # First removing any previous container + deleting volumes
-sudo docker rm node-app -fv
+# sudo docker rm node-app -fv
 
 # starting new container
 
@@ -12,4 +12,9 @@ sudo docker rm node-app -fv
 # -v : read only volume sync with container
 # -v : to spacify not to override this directory
 
-sudo docker run -d --env-file ./.env -p 3000:4000 --name node-app -v "$(pwd)":/app:ro -v /app/node_modules node-app-image
+# sudo docker run -d --env-file ./.env -p 3000:3000 --name node-app -v "$(pwd)":/app:ro -v /app/node_modules node-app-image
+
+
+# Using Docker Composer 
+
+sudo docker-compose up -d
