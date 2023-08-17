@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# First removing any previous container 
-sudo docker rm node-app -f
+# First removing any previous container + deleting volumes
+sudo docker rm node-app -fv
 
 # starting new container
 
